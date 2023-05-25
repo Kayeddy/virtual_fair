@@ -1,26 +1,15 @@
 import React, { useState } from "react";
-import { Canvas } from "@react-three/fiber";
-import { Sky } from "@react-three/drei";
-import { Physics } from "@react-three/cannon";
-
-import { Ground } from "./components";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Home, Fair } from "./pages";
 
 import "./App.css";
-import Player from "./components/Player";
-function App() {
-  const [count, setCount] = useState(0);
 
+function App() {
   return (
-    <>
-      <Canvas>
-        <Sky sunPosition={[100, 100, 20]} />
-        <ambientLight intensity={0.5} />
-        <Physics>
-          <Player />
-          <Ground />
-        </Physics>
-      </Canvas>
-    </>
+    <main className="app transition-all ease-in">
+      <Home />
+      <Fair />
+    </main>
   );
 }
 
