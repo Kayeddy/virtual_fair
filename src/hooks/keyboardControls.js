@@ -1,8 +1,10 @@
 import React, { useCallback, useEffect, useState } from "react";
 
 import { actionByKey } from "../helpers";
+import useStore from "../context";
 
 export const keyboardControls = () => {
+  const state = useStore();
   const [movement, setMovement] = useState({
     moveForward: false,
     moveBackwards: false,
@@ -14,6 +16,7 @@ export const keyboardControls = () => {
     setTexture3: false,
     setTexture4: false,
     setTexture5: false,
+    showCatalog: false,
   });
 
   const handleKeyDown = useCallback((e) => {

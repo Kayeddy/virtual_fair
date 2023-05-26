@@ -10,6 +10,7 @@ export const actionByKey = (key) => {
     Digit3: "glass",
     Digit4: "wood",
     Digit5: "log",
+    KeyC: "showCatalog",
   };
 
   return keyActionMap[key];

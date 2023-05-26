@@ -7,15 +7,16 @@ import { keyboardControls } from "../hooks/KeyboardControls";
 const Player = () => {
   const { camera } = useThree();
   const movement = keyboardControls();
+  /*
   console.log(
     "action",
     Object.entries(movement).filter(([k, v]) => v)
   );
-
+*/
   const [ref, api] = useSphere(() => ({
     mass: 1,
     type: "Dynamic",
-    position: [0, 3, 0],
+    position: [0, 3, 10],
   }));
 
   // Velocity
